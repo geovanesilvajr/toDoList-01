@@ -4,13 +4,15 @@
   padding: 0;
 }
 
-html {
+html,
+body {
   min-height: 100vh;
   background: #f5f5f5;
   color: #6200ee;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -21,10 +23,14 @@ html {
   background-color: #ffffff;
   width: 400px;
   border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #6200ee;
 }
 
 #input-area {
@@ -39,10 +45,13 @@ h1 {
   flex: 1;
   border-color: #6200ee;
   border-radius: 0.3rem;
+  padding: 0.5rem;
+  font-size: 1rem;
 }
 
-#task-input:active {
-  border-color: #6200ee;
+#task-input:focus {
+  outline: none;
+  border-color: #3700b3;
 }
 
 #addTaskBtn {
@@ -51,4 +60,38 @@ h1 {
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
   color: #ffffff;
+  font-size: 1rem;
+}
+
+#addTaskBtn:hover {
+  background: #3700b3;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #6200ee;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  #input-area {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    width: 90%;
+    padding: 1rem;
+  }
+  #input-area {
+    flex-direction: column;
+  }
 }
